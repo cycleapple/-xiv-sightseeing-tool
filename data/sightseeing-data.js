@@ -25,7 +25,7 @@ const SightseeingData = (function() {
             x: 9.5,
             y: 7.6,
             time: { start: 800, end: 1200 },
-            weather: null,
+            weather: ["Fair Skies", "Clear Skies"],
             emote: "lookout",
             expansion: "arr"
         },
@@ -37,7 +37,7 @@ const SightseeingData = (function() {
             x: 7.1,
             y: 15.0,
             time: { start: 1800, end: 500 },
-            weather: null,
+            weather: ["Clear Skies", "Fair Skies"],
             emote: "lookout",
             expansion: "arr"
         },
@@ -49,7 +49,7 @@ const SightseeingData = (function() {
             x: 20.3,
             y: 19.1,
             time: { start: 500, end: 800 },
-            weather: null,
+            weather: ["Rain", "Showers"],
             emote: "pray",
             expansion: "arr"
         },
@@ -61,7 +61,7 @@ const SightseeingData = (function() {
             x: 23.9,
             y: 40.2,
             time: { start: 1200, end: 1700 },
-            weather: null,
+            weather: ["Fair Skies", "Clear Skies"],
             emote: "lookout",
             expansion: "arr"
         },
@@ -73,7 +73,7 @@ const SightseeingData = (function() {
             x: 33.5,
             y: 19.0,
             time: { start: 800, end: 1200 },
-            weather: null,
+            weather: ["Clouds"],
             emote: "lookout",
             expansion: "arr"
         },
@@ -85,7 +85,7 @@ const SightseeingData = (function() {
             x: 32.6,
             y: 23.2,
             time: { start: 1800, end: 500 },
-            weather: null,
+            weather: ["Fair Skies", "Clear Skies"],
             emote: "lookout",
             expansion: "arr"
         },
@@ -97,7 +97,7 @@ const SightseeingData = (function() {
             x: 20.3,
             y: 26.4,
             time: { start: 500, end: 800 },
-            weather: null,
+            weather: ["Fog"],
             emote: "pray",
             expansion: "arr"
         },
@@ -109,7 +109,7 @@ const SightseeingData = (function() {
             x: 29.0,
             y: 30.4,
             time: { start: 500, end: 800 },
-            weather: null,
+            weather: ["Fair Skies", "Clear Skies"],
             emote: "lookout",
             expansion: "arr"
         },
@@ -121,7 +121,7 @@ const SightseeingData = (function() {
             x: 12.7,
             y: 8.0,
             time: { start: 1200, end: 1700 },
-            weather: null,
+            weather: ["Clouds"],
             emote: "lookout",
             expansion: "arr"
         },
@@ -133,7 +133,7 @@ const SightseeingData = (function() {
             x: 10.3,
             y: 6.2,
             time: { start: 1800, end: 500 },
-            weather: null,
+            weather: ["Clear Skies", "Fair Skies"],
             emote: "lookout",
             expansion: "arr"
         },
@@ -145,7 +145,7 @@ const SightseeingData = (function() {
             x: 21.0,
             y: 21.9,
             time: { start: 1200, end: 1700 },
-            weather: null,
+            weather: ["Fair Skies", "Clear Skies"],
             emote: "sit",
             expansion: "arr"
         },
@@ -157,7 +157,7 @@ const SightseeingData = (function() {
             x: 20.0,
             y: 30.1,
             time: { start: 800, end: 1200 },
-            weather: null,
+            weather: ["Fair Skies", "Clear Skies"],
             emote: "lookout",
             expansion: "arr"
         },
@@ -169,7 +169,7 @@ const SightseeingData = (function() {
             x: 10.3,
             y: 12.5,
             time: { start: 800, end: 1200 },
-            weather: null,
+            weather: ["Clear Skies", "Fair Skies"],
             emote: "lookout",
             expansion: "arr"
         },
@@ -181,7 +181,7 @@ const SightseeingData = (function() {
             x: 10.8,
             y: 8.6,
             time: { start: 1700, end: 1800 },
-            weather: null,
+            weather: ["Fair Skies", "Clear Skies"],
             emote: "lookout",
             expansion: "arr"
         },
@@ -193,7 +193,7 @@ const SightseeingData = (function() {
             x: 11.5,
             y: 11.2,
             time: { start: 1800, end: 500 },
-            weather: null,
+            weather: ["Clouds"],
             emote: "lookout",
             expansion: "arr"
         },
@@ -205,7 +205,7 @@ const SightseeingData = (function() {
             x: 13.9,
             y: 7.2,
             time: { start: 1200, end: 1700 },
-            weather: null,
+            weather: ["Fair Skies", "Clear Skies"],
             emote: "lookout",
             expansion: "arr"
         },
@@ -217,7 +217,7 @@ const SightseeingData = (function() {
             x: 8.0,
             y: 5.9,
             time: { start: 1700, end: 1800 },
-            weather: null,
+            weather: ["Fog"],
             emote: "lookout",
             expansion: "arr"
         },
@@ -229,7 +229,7 @@ const SightseeingData = (function() {
             x: 22.4,
             y: 22.1,
             time: { start: 500, end: 800 },
-            weather: null,
+            weather: ["Rain", "Showers"],
             emote: "pray",
             expansion: "arr"
         },
@@ -241,7 +241,7 @@ const SightseeingData = (function() {
             x: 24.2,
             y: 25.9,
             time: { start: 1200, end: 1700 },
-            weather: null,
+            weather: ["Clouds"],
             emote: "lookout",
             expansion: "arr"
         },
@@ -253,7 +253,7 @@ const SightseeingData = (function() {
             x: 15.4,
             y: 22.1,
             time: { start: 800, end: 1200 },
-            weather: null,
+            weather: ["Fair Skies", "Clear Skies"],
             emote: "lookout",
             expansion: "arr"
         },
