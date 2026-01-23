@@ -10,6 +10,25 @@ const Weather = (function() {
     // 天氣週期長度 (毫秒) - 8 艾歐澤亞小時
     const WEATHER_PERIOD = 1400000; // 23分20秒 = 1,400,000ms
 
+    // 區域別名映射 (子區域 -> 主區域)
+    const ZONE_ALIASES = {
+        "Limsa Lominsa Upper Decks": "Limsa Lominsa",
+        "Limsa Lominsa Lower Decks": "Limsa Lominsa",
+        "Ul'dah - Steps of Nald": "Ul'dah",
+        "Ul'dah - Steps of Thal": "Ul'dah",
+        "Old Gridania": "Gridania",
+        "New Gridania": "Gridania"
+    };
+
+    /**
+     * 取得區域的主要名稱（用於天氣查詢）
+     * @param {string} zone - 區域名稱
+     * @returns {string} 主區域名稱
+     */
+    function getMainZone(zone) {
+        return ZONE_ALIASES[zone] || zone;
+    }
+
     // 天氣圖示 ID
     const WEATHER_ICONS = {
         'Clear Skies': 60201,
@@ -318,7 +337,8 @@ const Weather = (function() {
      * @returns {string} 天氣名稱
      */
     function getWeatherForZone(zone, timestamp = Math.floor(Date.now() / 1000)) {
-        const weatherTable = ZONE_WEATHER[zone];
+        const mainZone = getMainZone(zone);
+        const weatherTable = ZONE_WEATHER[mainZone];
         if (!weatherTable) {
             return 'Unknown';
         }
@@ -364,13 +384,14 @@ const Weather = (function() {
     function forecastWeather(zone, count = 10, startTime = Math.floor(Date.now() / 1000)) {
         const forecast = [];
         const periodSeconds = 1400; // 23分20秒
+        const mainZone = getMainZone(zone);
 
         // 對齊到當前天氣週期開始
         const currentPeriod = Math.floor(startTime / periodSeconds);
         let time = currentPeriod * periodSeconds;
 
         for (let i = 0; i < count; i++) {
-            const weather = getWeatherForZone(zone, time);
+            const weather = getWeatherForZone(mainZone, time);
             forecast.push({
                 time: time * 1000, // 轉為毫秒
                 weather: weather,
@@ -394,10 +415,11 @@ const Weather = (function() {
         const periodSeconds = 1400;
         const now = Math.floor(Date.now() / 1000);
         const currentPeriod = Math.floor(now / periodSeconds);
+        const mainZone = getMainZone(zone);
 
         for (let i = 0; i < maxPeriods; i++) {
             const time = (currentPeriod + i) * periodSeconds;
-            const weather = getWeatherForZone(zone, time);
+            const weather = getWeatherForZone(mainZone, time);
 
             if (targetWeathers.includes(weather)) {
                 return {
@@ -425,6 +447,8 @@ const Weather = (function() {
     return {
         WEATHER_ICONS,
         ZONE_WEATHER,
+        ZONE_ALIASES,
+        getMainZone,
         calculateWeatherSeed,
         getWeatherForZone,
         getWeatherNameTC,
