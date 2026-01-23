@@ -367,6 +367,7 @@ body {
     display: flex;
     align-items: center;
     gap: 0.25rem;
+    flex-wrap: wrap;
 }
 
 .detail-value .icon {
@@ -374,16 +375,41 @@ body {
     height: 20px;
 }
 
-/* === Weather Icons === */
+/* 天氣欄位跨兩列顯示 */
+.detail-item:has(.weather-icons) {
+    grid-column: 1 / -1;
+}
+
+/* === Weather Tags === */
 .weather-icons {
     display: flex;
-    gap: 0.25rem;
+    gap: 0.35rem;
     flex-wrap: wrap;
 }
 
-.weather-icons img {
-    width: 24px;
-    height: 24px;
+.weather-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.2rem 0.5rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+.weather-tag img {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.weather-tag.any {
+    color: var(--text-muted);
+    font-style: italic;
+    border-style: dashed;
 }
 
 /* === Countdown === */

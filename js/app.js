@@ -373,12 +373,12 @@
         const timeEnd = formatGameTime(log.time.end);
 
         // 天氣顯示
-        let weatherHtml = '<span style="color: var(--text-muted)">任何天氣</span>';
+        let weatherHtml = '<span class="weather-tag any">任何天氣</span>';
         if (log.weather && log.weather.length > 0) {
             weatherHtml = log.weather.map(w => {
                 const iconUrl = Weather.getWeatherIconUrl(w);
                 const name = Weather.getWeatherNameTC(w);
-                return `<img src="${iconUrl}" alt="${name}" title="${name}" class="icon">`;
+                return `<span class="weather-tag"><img src="${iconUrl}" alt="${name}">${name}</span>`;
             }).join('');
         }
 
