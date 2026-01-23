@@ -430,8 +430,8 @@
                 <button class="complete-btn${isCompleted ? ' completed' : ''}" data-action="complete">
                     ${isCompleted ? '✓ 已完成' : '標記完成'}
                 </button>
-                <button class="copy-btn" data-action="copy" data-flag="/flag ${SightseeingData.getRegionNameTC(log.region)} (X:${log.x.toFixed(1)}, Y:${log.y.toFixed(1)})">
-                    複製座標
+                <button class="copy-btn" data-action="copy" data-flag="/${log.emote}">
+                    複製表情
                 </button>
             </div>
         `;
